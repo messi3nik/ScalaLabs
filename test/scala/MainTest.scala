@@ -1,3 +1,4 @@
+import Laba.{Composited, Prime}
 import org.scalatest.FunSuite
 
 import scala.collection.mutable.ArrayBuffer
@@ -24,6 +25,7 @@ class MainTest extends FunSuite {
     assert(Laba.nElement(list, 2) === 3)
   }
 */
+  /*
   test("secondLab1"){
     assert(Laba.findAverageNum(list)===3)
   }
@@ -34,13 +36,13 @@ class MainTest extends FunSuite {
 
   test("secondLab3"){
     assert(Laba.findCPP(list1)===List("C++"))
-  }
+  }*/
 
 
 
 
   test("ThirdLab1"){
-    assert(Laba.antiMulticate(List(2,3,4))===List(4,6,12))
+    assert(Laba.func(List(Prime(3),Composited(9)))===List(1,3))
   }
 
   test("ThirdLab2_1") {

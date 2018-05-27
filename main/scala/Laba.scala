@@ -1,3 +1,5 @@
+import java.awt.Composite
+
 import scala.annotation.tailrec
 import scala.collection.mutable.ArrayBuffer
 
@@ -44,6 +46,7 @@ object Laba extends App {
   }
 
 
+
   //SecondLab
   //1task
   def findAverageNum(list: List[Int]): Double = {
@@ -55,7 +58,6 @@ object Laba extends App {
         findAN(list, index + 1, sum + list(index))
       }
     }
-
     findAN(list, 0, 0) / list.length
   }
 
@@ -74,9 +76,12 @@ object Laba extends App {
     i.endsWith("++")
   }
 
+
+
+
   //ThirdLaba
   //1task
-  def antiMulticate(list: List[Int]): List[Int] = {
+  /*def antiMulticate(list: List[Int]): List[Int] = {
     list.map((i: Int) => isPrime(i))
   }
 
@@ -93,8 +98,34 @@ object Laba extends App {
     if (sum(factors(number)) == number + 1)
       number * 2
     else number*3
+  }*/
+
+  def func(list: List[num]): List[Double] ={
+    list.map((i:num)=>macth(i))
   }
 
+  def macth(elem: num): Double ={
+    elem match {
+      case Prime(_) => elem.unapply()
+      case Composited(_) => elem.unapply()
+    }
+  }
+
+  abstract class num{
+    def unapply():Double{}
+  }
+
+  case class Prime(num: Int) extends num{
+    def unapply():Double={
+      num/2
+    }
+  }
+
+  case class Composited(num: Int) extends num{
+    def unapply():Double={
+      num/3
+    }
+  }
 
   //2task
 
